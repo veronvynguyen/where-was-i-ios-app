@@ -15,6 +15,8 @@
 		3933257B1F4A5503005A7C4D /* Where_Was_ITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3933257A1F4A5503005A7C4D /* Where_Was_ITests.swift */; };
 		393325861F4A5503005A7C4D /* Where_Was_IUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393325851F4A5503005A7C4D /* Where_Was_IUITests.swift */; };
 		393325951F4A57C4005A7C4D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393325941F4A57C3005A7C4D /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		393325971F4C0989005A7C4D /* LocationPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393325961F4C0989005A7C4D /* LocationPoint.swift */; };
+		393325991F4C0B1D005A7C4D /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393325981F4C0B1D005A7C4D /* UserDefaultsDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		393325851F4A5503005A7C4D /* Where_Was_IUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where_Was_IUITests.swift; sourceTree = "<group>"; };
 		393325871F4A5503005A7C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		393325941F4A57C3005A7C4D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		393325961F4C0989005A7C4D /* LocationPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPoint.swift; sourceTree = "<group>"; };
+		393325981F4C0B1D005A7C4D /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				3933256C1F4A5503005A7C4D /* Assets.xcassets */,
 				3933256E1F4A5503005A7C4D /* LaunchScreen.storyboard */,
 				393325711F4A5503005A7C4D /* Info.plist */,
+				393325961F4C0989005A7C4D /* LocationPoint.swift */,
+				393325981F4C0B1D005A7C4D /* UserDefaultsDataStore.swift */,
 			);
 			path = "Where Was I";
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393325991F4C0B1D005A7C4D /* UserDefaultsDataStore.swift in Sources */,
 				393325681F4A5503005A7C4D /* ViewController.swift in Sources */,
+				393325971F4C0989005A7C4D /* LocationPoint.swift in Sources */,
 				393325661F4A5503005A7C4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,8 +21,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
     }
     
+    override func viewWillAppear(_ animated:Bool) {
+        annotateLastLocation()
+    }
+    
+    func annotateLastLocation () {
+        if let savedCoord = UserDefaultsDataStore().getLastLocation()
+        {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.latitude = Double(savedCoord.latitude)!
+            annotation.coordinate.longitude = Double(savedCoord.longitude)!
+            annotation.title = "Was here!"
+            annotation.subtitle = "Remember?"
+            mapView.addAnnotation(annotation)
+        }
+    }
+    
+
+    
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        let coord = locationManager.location?.coordinate
+        
+        if let lat = coord?.latitude {
+            if let long = coord?.latitude {
+                let lp = LocationPoint(lat: String(lat), long: String(long))
+                UserDefaultsDataStore().storeLocationPoint(locationPoint: lp)
+            }
+        }
+        
+    }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
             // make a message box to user to turn on location
